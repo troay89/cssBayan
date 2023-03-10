@@ -1,0 +1,50 @@
+body {
+    background-color: cornsilk;
+}
+
+.wrapper {
+    max-width: 1920px;
+}
+
+h1 {
+    text-align: center;
+    color: coral;
+    font-size: 48px;
+    margin-bottom: 70px;
+}
+
+.container {
+    margin: auto;
+    max-width: 1400px;
+    font-size: 1.5rem;
+    color: cornflowerblue;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.meme {
+    border-top: 1px solid #ada8a8;
+}
+
+.plus {
+    width: 32px;
+    height: 32px;
+    background-image:  url("./images/plus.png");
+    background-size: 32px 32px;
+    margin-right: 120px;
+}
+
+.title {
+    margin-left: 100px;
+}
+
+.meme-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picture-meme {
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+}
