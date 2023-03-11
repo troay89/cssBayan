@@ -1,10 +1,6 @@
 body {
     background-color: cornsilk;
-    font-size: 10px;
-}
-
-.wrapper {
-    max-width: 1920px;
+    font-size: 0.63rem;
 }
 
 h1 {
@@ -16,37 +12,15 @@ h1 {
 
 .container {
     margin: auto;
-    max-width: 1400px;
-}
-
-.container:not(:hover) .plus {
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.container:not(:hover) .title {
-    color: black;
+    max-width: 85rem;
 }
 
 .meme {
-    border-top: 1px solid #ada8a8;
-}
-
-.meme:not(:hover) .meme-container {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: height 0.3s;
+    border-top: 0.001rem solid #ada8a8;
 }
 
 .meme:has(input:checked) .plus {
     transform: rotate(45deg);
-}
-
-
-.meme:not(:hover) .plus {
-    transform: rotate(0deg);
-    transition: transform 0.5s;
 }
 
 .meme:has(label:active).meme {
@@ -100,10 +74,7 @@ h1 {
     transition: 0.5s;
 }
 
-.meme-container span:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
-}
+
 
 .image1 {
     display: block;
@@ -146,7 +117,165 @@ input {
 }
 
 
+@media (hover: hover) {
+    .container:not(:hover) .plus {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
+    .container:not(:hover) .title {
+        color: black;
+    }
+
+    .meme:not(:hover) .meme-container {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.3s;
+    }
+
+    .meme:not(:hover) .plus {
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+    }
+
+    .meme-container span:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 820px){
+
+    .container {
+        margin: auto;
+        max-width: 40rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 25rem;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .image1 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image2 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image3 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image4 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .meme-container {
+        display: block;
+        height: 25rem;
+
+    }
+}
+
+@media (hover: none) and (max-device-width: 1920px){
+    .plus {
+        opacity: 1;
+    }
+
+    .title {
+        color: black;
+    }
+
+    .meme-container {
+        display: block;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.3s;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 35rem;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
+    }
+
+    .plus {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-device-width: 820px){
+    .meme:has(input:checked) .meme-container {
+        height: 25rem;
+    }
+}
+
+@media (max-device-width: 640px){
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .image1 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/1phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+
+    .image2 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/2phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+    .image3 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/3phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+    .image4 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/4phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 14rem;
+    }
+}
 
 
 
