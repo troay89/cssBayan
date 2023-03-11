@@ -131,7 +131,7 @@ input {
         height: 0;
         opacity: 0;
         visibility: hidden;
-        transition: height 0.3s;
+        transition: all 0.3s;
     }
 
     .meme:not(:hover) .plus {
@@ -141,7 +141,7 @@ input {
 
     .meme-container span:hover {
         transform: scale(1.05);
-        transition: 0.5s;
+        transition: transform 0.5s;
     }
 }
 
@@ -215,7 +215,7 @@ input {
         height: 0;
         opacity: 0;
         visibility: hidden;
-        transition: height 0.3s;
+        transition: all 0.3s;
     }
 
     .meme:has(input:checked) .meme-container {
@@ -237,15 +237,6 @@ input {
 }
 
 @media (max-device-width: 640px){
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
     .image1 {
         height: 15rem;
         width: 17rem;
@@ -274,6 +265,18 @@ input {
 
     .meme:has(input:checked) .meme-container {
         height: 14rem;
+    }
+}
+
+
+@media (max-device-width: 320px){
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
     }
 }
 
