@@ -1,0 +1,286 @@
+body {
+    background-color: cornsilk;
+    font-size: 0.63rem;
+}
+
+h1 {
+    text-align: center;
+    color: coral;
+    font-size: 4.8rem;
+    margin-bottom: 5rem;
+}
+
+.container {
+    margin: auto;
+    max-width: 85rem;
+}
+
+.meme {
+    border-top: 0.001rem solid #ada8a8;
+}
+
+.meme:has(input:checked) .plus {
+    transform: rotate(45deg);
+}
+
+.meme:has(label:active).meme {
+    filter: grayscale(80%);
+}
+
+.meme:has(input:checked) .meme-container {
+    height: 35rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.meme:has(input:checked) .title {
+    color: cornflowerblue;
+}
+
+.area-meme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: cornflowerblue;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.plus {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./images/plus.png");
+    background-size: 2rem 2rem;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+}
+
+.meme-container {
+    display: block;
+    height: 35rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.meme-container span {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+
+
+.image1 {
+    display: block;
+    height: 35rem;
+    width: 38rem;
+    margin: auto;
+    background: url(images/1.jpg) no-repeat;
+    background-size: 38rem, 35rem;
+}
+
+.image2 {
+    display: block;
+    height: 35rem;
+    width: 38rem;
+    margin: auto;
+    background: url(images/2.jpg) no-repeat;
+    background-size: 38rem, 35rem;
+}
+
+.image3 {
+    display: block;
+    height: 35rem;
+    width: 38rem;
+    margin: auto;
+    background: url(images/3.jpg) no-repeat;
+    background-size: 38rem, 35rem;
+}
+
+.image4 {
+    display: block;
+    height: 35rem;
+    width: 38rem;
+    margin: auto;
+    background: url(images/4.jpg) no-repeat;
+    background-size: 38rem, 35rem;
+}
+
+input {
+    display: none;
+}
+
+
+@media (hover: hover) {
+    .container:not(:hover) .plus {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .container:not(:hover) .title {
+        color: black;
+    }
+
+    .meme:not(:hover) .meme-container {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .meme:not(:hover) .plus {
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+    }
+
+    .meme-container span:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s;
+    }
+}
+
+@media screen and (max-width: 820px){
+
+    .container {
+        margin: auto;
+        max-width: 40rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 25rem;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .image1 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image2 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image3 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .image4 {
+        height: 25rem;
+        width: 28rem;
+        margin: auto;
+        background-size: 28rem, 25rem;
+    }
+
+    .meme-container {
+        display: block;
+        height: 25rem;
+
+    }
+}
+
+@media (hover: none) and (max-device-width: 1920px){
+    .plus {
+        opacity: 1;
+    }
+
+    .title {
+        color: black;
+    }
+
+    .meme-container {
+        display: block;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 35rem;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
+    }
+
+    .plus {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-device-width: 820px){
+    .meme:has(input:checked) .meme-container {
+        height: 25rem;
+    }
+}
+
+@media (max-device-width: 640px){
+    .image1 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/1phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+
+    .image2 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/2phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+    .image3 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/3phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+    .image4 {
+        height: 15rem;
+        width: 17rem;
+        background: url(images/4phone.jpg) no-repeat;
+        background-size: 15rem, 17rem;
+    }
+
+    .meme:has(input:checked) .meme-container {
+        height: 14rem;
+    }
+}
+
+
+@media (max-device-width: 320px){
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
